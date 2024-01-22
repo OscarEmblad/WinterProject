@@ -13,14 +13,9 @@ public class Payment {
         int val = scanner.nextInt();
 
         switch (val) {
-            case 1:
-                kortBetalning();
-                break;
-            case 2:
-                kontantBetalning();
-                break;
-            default:
-                System.out.println("Ogiltigt val. Vänligen välj 1 eller 2.");
+            case 1 -> kortBetalning();
+            case 2 -> kontantBetalning();
+            default -> System.out.println("Ogiltigt val. Vänligen välj 1 eller 2.");
         }
 
         scanner.close();

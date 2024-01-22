@@ -4,7 +4,7 @@ public class Owner {
     private String contactNumber;
     private String emailAddress;
 
-    public HotelOwner(String name, String contactNumber, String emailAddress) {
+    public Owner(String name, String contactNumber, String emailAddress) {
         this.name = name;
         this.contactNumber = contactNumber;
         this.emailAddress = emailAddress;
@@ -45,7 +45,7 @@ public class Owner {
 
     public static void main(String[] args) {
         // Exempel på användning
-        HotelOwner hotelOwner = new HotelOwner("Joe Doe", "123-4567890", "joedoe@gmail.com");
+        HotelOwner hotelOwner = new HotelOwner("Steven Bing", "123-4567890", "StevenBing@gmail.com");
         System.out.println("Hotel Owner Information:");
         System.out.println(hotelOwner);
     }
