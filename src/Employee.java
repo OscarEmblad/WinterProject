@@ -1,6 +1,6 @@
 public class Employee {
-    private int id;
-    private String namn;
+    private final int id;
+    private final String namn;
     private double lon;
 
     // Konstruktor
@@ -37,7 +37,7 @@ public class Employee {
     // Användning
     public static void main(String[] args) {
         // Skapa en instans av AnstalldPersonal
-        AnstalldPersonal anstalld = new AnstalldPersonal(1, "Alina Hederberg", 50000.0);
+        Employee anstalld = new Employee(1, "Alina Hederberg", 50000.0);
 
         // Skriv ut information om den anställde
         System.out.println(anstalld);

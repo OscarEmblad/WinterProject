@@ -45,7 +45,7 @@ public class Owner {
 
     public static void main(String[] args) {
         // Exempel på användning
-        HotelOwner hotelOwner = new HotelOwner("Steven Bing", "123-4567890", "StevenBing@gmail.com");
+        Owner hotelOwner = new Owner("Steven Bing", "123-4567890", "StevenBing@gmail.com");
         System.out.println("Hotel Owner Information:");
         System.out.println(hotelOwner);
     }

@@ -26,7 +26,7 @@ public class Hotelmanagement {
 
     public static void main(String[] args) {
         // Skapa ett hotellobjekt med namn, öppningstimme och stängningstimme
-        Hotel myHotel = new Hotel("Exempelhotellet", 8, 22);
+        Hotelmanagement myHotel = new Hotelmanagement("Exempelhotellet", 8, 22);
 
         // Kolla om hotellet är öppet
         if (myHotel.isOpen()) {
