@@ -40,24 +40,18 @@ public class Customer {
     }
 
     private static String getRoomType(int choice) {
-        switch (choice) {
-            case 1:
-                return "Enkelrum";
-            case 2:
-                return "Dubbelrum";
-            default:
-                return "Okänt rumstyp";
-        }
+        return switch (choice) {
+            case 1 -> "Enkelrum";
+            case 2 -> "Dubbelrum";
+            default -> "Okänt rumstyp";
+        };
     }
 
     private static String getPaymentMethod(int choice) {
-        switch (choice) {
-            case 1:
-                return "Kort";
-            case 2:
-                return "Kontanter";
-            default:
-                return "Okänd betalningsmetod";
-        }
+        return switch (choice) {
+            case 1 -> "Kort";
+            case 2 -> "Kontanter";
+            default -> "Okänd betalningsmetod";
+        };
     }
 }
