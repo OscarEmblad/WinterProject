@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b000b796-899b-4502-aed7-1a773d971581" name="Changes" comment="Update 2">
+    <list default="true" id="b000b796-899b-4502-aed7-1a773d971581" name="Changes" comment="Update 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employee.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hotelmanagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hotelmanagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainHotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainHotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainHotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Payment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +95,29 @@
       <workItem from="1705306226794" duration="5209000" />
       <workItem from="1705909498355" duration="314000" />
       <workItem from="1705910145798" duration="2611000" />
-      <workItem from="1705913707654" duration="3383000" />
+      <workItem from="1705913707654" duration="3857000" />
+      <workItem from="1705992557965" duration="725000" />
+      <workItem from="1706001337220" duration="228000" />
+      <workItem from="1706002624149" duration="1004000" />
+      <workItem from="1706014051814" duration="3812000" />
+      <workItem from="1706080340704" duration="1610000" />
+      <workItem from="1706087139382" duration="13361000" />
+      <workItem from="1706116991286" duration="3806000" />
+      <workItem from="1706167775791" duration="1552000" />
+      <workItem from="1706178663261" duration="2303000" />
+      <workItem from="1706181433659" duration="994000" />
+      <workItem from="1706252969664" duration="2800000" />
+      <workItem from="1707299233825" duration="728000" />
+      <workItem from="1707391202370" duration="184000" />
+      <workItem from="1707685663332" duration="3775000" />
+      <workItem from="1707812133915" duration="600000" />
+      <workItem from="1708070532313" duration="5393000" />
+      <workItem from="1708084395504" duration="167000" />
+      <workItem from="1708433564011" duration="50000" />
+      <workItem from="1708435631233" duration="127000" />
+      <workItem from="1709646302065" duration="142000" />
+      <workItem from="1710248750371" duration="677000" />
+      <workItem from="1710682336277" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -118,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705912772936</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update 3">
+      <option name="closed" value="true" />
+      <created>1705917176186</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705917176186</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +161,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Update" />
     <MESSAGE value="Update 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 2" />
+    <MESSAGE value="Update 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 3" />
   </component>
 </project>

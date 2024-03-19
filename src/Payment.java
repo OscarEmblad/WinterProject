@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Payment {
@@ -10,35 +11,85 @@ public class Payment {
         System.out.println("1. Kortbetalning");
         System.out.println("2. Kontantbetalning");
 
-        int val = scanner.nextInt();
+        boolean isValidInput = false;
 
-        switch (val) {
-            case 1 -> kortBetalning();
-            case 2 -> kontantBetalning();
-            default -> System.out.println("Ogiltigt val. Vänligen välj 1 eller 2.");
+        while (!isValidInput) {
+            try {
+                int val = scanner.nextInt();
+
+                switch (val) {
+                    case 1 -> isValidInput = kortBetalning();
+                    case 2 -> isValidInput = kontantBetalning();
+                    default -> {
+                        System.out.println("Ogiltigt val. Vänligen välj 1 eller 2.");
+                        scanner.nextLine(); // Rensa bufferten
+                    }
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Felaktig inmatning. Ange en giltig siffra. Försök igen.");
+                scanner.nextLine(); // Rensa bufferten
+            }
         }
 
         scanner.close();
     }
 
-    public static void kortBetalning() {
+    public static boolean kortBetalning() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ange kortnummer:");
-        String kortnummer = scanner.next();
+        boolean isValidInput = false;
 
-        System.out.println("Ange utgångsdatum (MM/ÅÅ):");
-        String utgangsdatum = scanner.next();
+        while (!isValidInput) {
+            try {
+                System.out.println("Belopp 5000. Ange kortnummer (Sista 4 siffror) (XXXX):");
+                String kortnummer = scanner.next();
 
-        System.out.println("Kort betalning genomförd.Tack!");
+                if (!kortnummer.matches("\\d{4}")) {
+                    throw new InputMismatchException("Ogiltigt kortnummer. Ange 4 siffror.");
+                }
+
+                System.out.println("Ange utgångsdatum (MM/ÅÅ):");
+                String utgangsdatum = scanner.next();
+
+                if (!utgangsdatum.matches("\\d{2}/\\d{2}")) {
+                    throw new InputMismatchException("Ogiltigt utgångsdatum. Ange i formatet MM/ÅÅ.");
+                }
+
+                System.out.println("Kort betalning genomförd. Tack!");
+                isValidInput = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Felaktig inmatning: " + e.getMessage());
+                scanner.nextLine(); // Rensa bufferten
+            }
+        }
+
+        // scanner.close(); // Ta inte bort kommentaren här
+        return isValidInput;
     }
 
-    public static void kontantBetalning() {
+    public static boolean kontantBetalning() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ange belopp att betala kontant:");
-        double belopp = scanner.nextDouble();
+        boolean isValidInput = false;
 
-        System.out.println("Kontant betalning genomförd. Tack!");
+        while (!isValidInput) {
+            try {
+                System.out.println("Belopp 5000. Ange 5000 för att betala!:");
+                double belopp = scanner.nextDouble();
+
+                if (belopp != 5000) {
+                    throw new InputMismatchException("Ogiltigt belopp. Ange 5000.");
+                }
+
+                System.out.println("Kontant betalning genomförd. Tack!");
+                isValidInput = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Felaktig summa: " + e.getMessage());
+                scanner.nextLine(); // Rensa bufferten
+            }
+        }
+
+        // scanner.close(); // Ta inte bort kommentaren här
+        return isValidInput;
     }
 }
