@@ -3,22 +3,22 @@ import java.util.Scanner;
 
 public class Customer {
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Läs in användarens information
-        System.out.print("Välkommen till Grandhotel. För att boka ett hotellrum behöver du fylla i lite information. Amnge ditt namn: ");
+        // Be användaren om deras information
+        System.out.print("Välkommen till Grandhotel. För att boka ett hotellrum behöver du fylla i lite information. Ange ditt namn: ");
         String name = scanner.nextLine();
 
         int id = 0;
         boolean validId = false;
+        // Validera användarens ID-inmatning
         while (!validId) {
             try {
                 System.out.print("Ange ditt ID. Sista 4 siffror på personnummer(XXXX): ");
                 String idInput = scanner.next();
 
-                // Kontrollera att det är exakt 4 siffror
+                // Kontrollera om inmatningen består av exakt 4 siffror
                 if (idInput.length() == 4 && idInput.matches("\\d+")) {
                     id = Integer.parseInt(idInput);
                     validId = true;
@@ -26,14 +26,15 @@ public class Customer {
                     throw new InputMismatchException();
                 }
             } catch (InputMismatchException | NumberFormatException e) {
-                System.out.println("Felaktigt ID. Ange exakt 4 siffror.");
+                System.out.println("Ogiltigt ID. Ange exakt 4 siffror.");
                 scanner.nextLine(); // Rensa bufferten för att undvika en oändlig loop
             }
         }
 
-        // Visa tillgängliga rum
+        // Visa tillgängliga rumalternativ
         int roomChoice = 0;
         boolean validRoomChoice = false;
+        // Validera användarens rumval
         while (!validRoomChoice) {
             try {
                 System.out.println("Välj ett rum att boka:");
@@ -42,14 +43,14 @@ public class Customer {
                 roomChoice = scanner.nextInt();
                 validRoomChoice = true;
 
-                // Kolla om rumvalet är giltigt
+                // Kontrollera om rumvalet är giltigt
                 if (roomChoice < 1 || roomChoice > 2) {
                     throw new InputMismatchException();
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Felaktigt val. Ange ett heltal mellan 1 och 2.");
+                System.out.println("Ogiltigt val. Ange ett heltal mellan 1 och 2.");
                 scanner.nextLine(); // Rensa bufferten för att undvika en oändlig loop
-                validRoomChoice = false; // Sätt tillbaka flaggan för att loopa igen
+                validRoomChoice = false; // Återställ flaggan för att loopa igen
             }
         }
         String roomType = getRoomType(roomChoice);
@@ -57,6 +58,7 @@ public class Customer {
         // Visa betalningsalternativ
         int paymentChoice = 0;
         boolean validPaymentChoice = false;
+        // Validera användarens betalningsmetodval
         while (!validPaymentChoice) {
             try {
                 System.out.println("Välj betalningsmetod:");
@@ -65,14 +67,14 @@ public class Customer {
                 paymentChoice = scanner.nextInt();
                 validPaymentChoice = true;
 
-                // Kolla om betalningsvalet är giltigt
+                // Kontrollera om betalningsvalet är giltigt
                 if (paymentChoice < 1 || paymentChoice > 2) {
                     throw new InputMismatchException();
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Felaktigt val. Ange ett heltal mellan 1 och 2.");
+                System.out.println("Ogiltigt val. Ange ett heltal mellan 1 och 2.");
                 scanner.nextLine(); // Rensa bufferten för att undvika en oändlig loop
-                validPaymentChoice = false; // Sätt tillbaka flaggan för att loopa igen
+                validPaymentChoice = false; // Återställ flaggan för att loopa igen
             }
         }
         String paymentMethod = getPaymentMethod(paymentChoice);
@@ -88,14 +90,16 @@ public class Customer {
         scanner.close();
     }
 
+    // Metod för att få rumstyp baserat på användarens val
     private static String getRoomType(int choice) {
         return switch (choice) {
             case 1 -> "Enkelrum";
             case 2 -> "Dubbelrum";
-            default -> "Okänt rumstyp";
+            default -> "Okänd rumstyp";
         };
     }
 
+    // Metod för att få betalningsmetod baserat på användarens val
     private static String getPaymentMethod(int choice) {
         return switch (choice) {
             case 1 -> "Kort";
