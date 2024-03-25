@@ -1,3 +1,4 @@
+// Customer-klassen  låter användaren boka hotellrum genom att ange sina personuppgifter och göra val för rumstyp och betalningsmetod.
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

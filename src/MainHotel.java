@@ -1,3 +1,4 @@
+// En kod som fungerar som en enkel hotellhanterare. Den använder en scanner för att läsa in användarinput från terminalen och presenterar en meny där användaren kan göra olika val.
 import java.util.Scanner;
 
 public class MainHotel {

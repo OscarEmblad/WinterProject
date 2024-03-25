@@ -1,3 +1,4 @@
+// Owner-klassen håller  information om en ägare, inklusive namn, kontakt och e-post. Den har metoder för att hämta och presentera ägarinformation samt en metod för att interaktivt fråga användaren om vilken information de vill veta om ägaren.
 import java.util.Scanner;
 
 public class Owner {

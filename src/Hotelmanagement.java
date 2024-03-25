@@ -1,8 +1,9 @@
+// Hotelmanagement-klassen hanterar information om ett hotell, som namn och öppettider
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-// Hotelmanagement-klassen hanterar information om ett hotell, som namn och öppettider
+
 public class Hotelmanagement {
     private final String hotelName;  // Namnet på hotellet
     private final int openingHour;   // Öppningstimmen för hotellet
